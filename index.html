@@ -1,31 +1,100 @@
 <html>
+
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="init.js"></script>
+	<script type="text/javascript" src="spotify.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
+
 <body>
-	<div class="widget">
-		<div class="header">
-		<!-- Try adding/removing these classes: -->
-		<!-- disabled -->
-		<!-- playing -->
-		<div class="btn-play disabled"></div>
-
-		<div class="metadata">
-		  <p class="title">Hunger of The Pine</p>
-		  <p class="author">alt-J</p>
-
-		  <div class="seekbar">
-		    <progress value="5" max="30"></progress>
-		  </div>
+	<div class="container-fluid">
+		<div class="page-header">
+			<h1>Custom Spotify</h1>
+			<img src="./assests/Xenatt-The-Circle-App-Spotify.ico" alt ="logo" class="img-responsive">
 		</div>
-		</div>
-		<div class="cover">
-		<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
-		</div>
+		<div class="widget">
+			<div class="header">
+				<div class="btn-play disabled"></div>
 
-		<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+				<div class="metadata">
+					<p class="title">Hunger of The Pine</p>
+					<a class="author artist-information">alt-J</a>
+
+					<div class="seekbar">
+						<progress value="5" max="30"></progress>
+					</div>
+				</div>
+			</div>
+			<div class="cover">
+				<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+			</div>
+
+			<audio class="js-player" src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<h4> Search a Song </h4>
+				<input type="text" class="input-song">
+				<button class="btn-search-song">Search</button>
+			</div>
+			<div class="col-md-4">
+			</div>
+		</div>
 	</div>
+	<!-- Bootstrap Modal -->
+	<div class="modal fade js-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
 
+				<div class="modal-header">
+					<!-- Close button -->
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span>&times;</span>
+					</button>
+
+					<h2>Band Info</h2>
+
+					<div class="modal-body">
+						<dl class="dl-horizontal">
+							<dt>Name</dt>
+							<dd class="js-artist-name"></dd>
+
+							<dt>Genres</dt>
+							<dd class="js-artist-genres"></dd>
+
+							<dt>Photo</dt>
+							<dd><img class="js-artist-img img-responsive" src="" alt="band image" /></dd>
+
+							<dt>Followers</dt>
+							<dd class="js-artist-followers"></dd>
+
+							<dt>Popularity</dt>
+							<dd class="js-artist-popularity"></dd>
+						</dl>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	</div>
 </body>
+
 </html>

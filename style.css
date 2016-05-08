@@ -1,3 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+.container-fluid{
+  background-color: grey;
+  padding: 30px;
+}
+
+.page-header{
+  color: lime;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+.page-header img{
+  max-height: 80px;
+  display: inline-block;
+}
+
+
 .widget {
   width: 300px;
   margin: 10px auto 0;
